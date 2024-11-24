@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="searchQuery" (input)="searchEmployees()" placeholder="Search by Name or Email" />
+
+<div *ngFor="let employee of employees; let i = index">
+  <div>
+    <span>{{ employee.name }} ({{ employee.designation }})</span>
+    <button (click)="deleteEmployee(i)">Delete</button>
+  </div>
+</div>

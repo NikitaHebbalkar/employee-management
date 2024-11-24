@@ -1,0 +1,37 @@
+<form (ngSubmit)="submitForm()">
+  <div>
+    <label>Name:</label>
+    <input [(ngModel)]="name" name="name" required />
+  </div>
+
+  <div>
+    <label>Company Name:</label>
+    <input [(ngModel)]="companyName" name="companyName" required />
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input [(ngModel)]="email" name="email" required />
+  </div>
+
+  <div>
+    <label>Contact No:</label>
+    <input [(ngModel)]="contactNo" name="contactNo" required />
+  </div>
+
+  <div>
+    <label>Designation:</label>
+    <select [(ngModel)]="designation" name="designation" required>
+      <option *ngFor="let designation of designations" [value]="designation">{{ designation }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Avatar:</label>
+    <select [(ngModel)]="avatar" name="avatar" required>
+      <option *ngFor="let avatar of avatars" [value]="avatar">{{ avatar }}</option>
+    </select>
+  </div>
+
+  <button type="submit">Save</button>
+</form>
